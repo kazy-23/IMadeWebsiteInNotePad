@@ -1,0 +1,143 @@
+<html>
+
+
+<head>
+
+<title>CU opening</title>
+
+<style>
+
+html{scroll-behavior: smooth;}
+body{
+	font-family: "Verdana";
+	margin: 0;
+	color: #EEEEEE;
+	transition: 1s;
+}
+a{
+	text-decoration: none;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #222831;
+	font-size: 2vw;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: inline;
+	padding-inline: 5px;
+	color: #EEEEEE;
+}
+.title{
+	color: #FFD369;
+	font-weight: bold;
+}
+#home {
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#home h1 {
+	font-size: 9vw;
+	color: #FFD369;
+}
+#home h2 {
+	font-size: 5vw;
+}
+#home h3 {
+	font-size: 3vw;
+	color: #EEEEEE;
+	transition: 1s;
+}
+#home h3:hover {
+	color: #393E46;
+}
+#home .container {
+	width: 100%;
+	text-align: center;
+}
+#about {
+	background-color: #222831;
+	text-align: center;
+	height: 100vh;
+	padding: 1vw;
+}
+#about h1 {
+	display: inline-block;
+	font-size: 7vw;
+	color: #FFD369;
+}
+#about h2 {
+	font-size: 4vw;
+}
+#about h3 {
+	font-size: 4vw;
+	color: #FFD369;
+	transition: 1s;
+}
+#about h3:hover {
+	color: #393E46;
+}	
+</style>
+
+</head>
+
+
+<body>
+<nav>
+	<a href="/"><div class="title">CODER'S UNIVERSITY</div></a>
+	<a href="#about"><ul>
+		<li>ABOUT</li>
+	</ul></a>
+</nav>
+<main>
+	<section id="home">
+		<div class="container">
+				<h1 id="clock">10 d 20 h 40 m 23 s<h1>
+				<h2> Until the Opening </h2>
+				<a href="https://codersuniversity.net" target="_blank"><h3> Click here to reserve your spot now! </h3></a>
+		</div>
+	</section>
+	<section id="about">
+		<h1>About</h1>
+		<h2>Want to become a coder?</h2>
+		<p>Well, You are at the right place.</p>
+		<p>I have assembled the only tutorials you will ever need.</p>
+		<p>No more browsing through countless good and bad video lectures on YouTube.</p>
+		<p>Just open Coder's University and you have top quality tutorials in front of you.</p>
+		<p>Places are limited in order for professor to give personal attention to each member.</p>
+		<p>Don't miss out! This is life-time chance for You to learn the skill of the future.</p>
+		<a href="https://codersuniversity.net"><h3> JOIN NOW! <h3></a>
+	</section>
+</main>
+
+<script>
+var countDownDate = new Date("Jul 10, 2023 00:00:00").getTime();
+var x = setInterval(function() {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+  	+ minutes + "m " + seconds + "s ";
+	if (distance < 0) {
+	    clearInterval(x);
+	}
+}, 1000);
+</script>
+</body>
+
+
+</html>
